@@ -357,7 +357,7 @@ module.exports = "img {\n    max-width: 100%;\n}\n\n.product-modal {\n    max-wi
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"product-modal\">\n  <ng-container *ngIf=\"!product\">\n    <mat-spinner></mat-spinner>\n  </ng-container>\n  <ng-container *ngIf=\"product\">\n      <mat-card>\n        <img mat-card-image src=\"{{'/assets/img/products/'+product.image}}\" alt=\"{{product.title}}\" />\n        <mat-card-content>\n          <h1>{{product.title}}</h1>\n          <p>{{product.description}}</p>\n        </mat-card-content>\n        <mat-card-actions>\n          <button mat-raised-button (click)=\"closeDialog()\">Close</button>\n          <button mat-raised-button color=\"primary\">${{product.price}} - Buy</button>\n        </mat-card-actions>\n      </mat-card>\n  </ng-container>\n</div>"
+module.exports = "<div class=\"product-modal\">\n  <ng-container *ngIf=\"!product\">\n    <mat-spinner></mat-spinner>\n  </ng-container>\n  <ng-container *ngIf=\"product\">\n      <mat-card>\n        <img mat-card-image src=\"{{'./assets/img/products/'+product.image}}\" alt=\"{{product.title}}\" />\n        <mat-card-content>\n          <h1>{{product.title}}</h1>\n          <p>{{product.description}}</p>\n        </mat-card-content>\n        <mat-card-actions>\n          <button mat-raised-button (click)=\"closeDialog()\">Close</button>\n          <button mat-raised-button color=\"primary\">${{product.price}} - Buy</button>\n        </mat-card-actions>\n      </mat-card>\n  </ng-container>\n</div>"
 
 /***/ }),
 

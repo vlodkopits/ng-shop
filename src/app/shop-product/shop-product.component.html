@@ -4,7 +4,7 @@
   </ng-container>
   <ng-container *ngIf="product">
       <mat-card>
-        <img mat-card-image src="{{'/assets/img/products/'+product.image}}" alt="{{product.title}}" />
+        <img mat-card-image src="{{'./assets/img/products/'+product.image}}" alt="{{product.title}}" />
         <mat-card-content>
           <h1>{{product.title}}</h1>
           <p>{{product.description}}</p>
