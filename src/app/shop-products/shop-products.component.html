@@ -1,0 +1,19 @@
+<h1>Products</h1>
+<mat-grid-list cols="3" rowHeight="3:6">
+  <mat-grid-tile *ngFor="let product of products | async">
+    <ng-container *ngIf="!product">
+      <mat-spinner></mat-spinner>
+    </ng-container>
+    <mat-card *ngIf="product">
+        <img mat-card-image src="{{'/assets/img/products/'+product.image}}" alt="{{product.title}}" />
+        <mat-card-content>
+          <h1>{{product.title}}</h1>
+          <p>{{product.description}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button (click)="openDialog(product)">Info</button>
+          <button mat-raised-button color="primary">${{product.price}} - Buy</button>
+        </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

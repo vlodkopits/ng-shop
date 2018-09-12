@@ -1,0 +1,18 @@
+<div class="product-modal">
+  <ng-container *ngIf="!product">
+    <mat-spinner></mat-spinner>
+  </ng-container>
+  <ng-container *ngIf="product">
+      <mat-card>
+        <img mat-card-image src="{{'/assets/img/products/'+product.image}}" alt="{{product.title}}" />
+        <mat-card-content>
+          <h1>{{product.title}}</h1>
+          <p>{{product.description}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button (click)="closeDialog()">Close</button>
+          <button mat-raised-button color="primary">${{product.price}} - Buy</button>
+        </mat-card-actions>
+      </mat-card>
+  </ng-container>
+</div>
