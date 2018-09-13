@@ -5,7 +5,7 @@
       <mat-spinner></mat-spinner>
     </ng-container>
     <mat-card *ngIf="product">
-        <img mat-card-image src="{{'/assets/img/products/'+product.image}}" alt="{{product.title}}" />
+        <img mat-card-image src="{{'./assets/img/products/'+product.image}}" alt="{{product.title}}" />
         <mat-card-content>
           <h1>{{product.title}}</h1>
           <p>{{product.description}}</p>

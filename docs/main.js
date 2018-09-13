@@ -432,7 +432,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Products</h1>\n<mat-grid-list cols=\"3\" rowHeight=\"3:6\">\n  <mat-grid-tile *ngFor=\"let product of products | async\">\n    <ng-container *ngIf=\"!product\">\n      <mat-spinner></mat-spinner>\n    </ng-container>\n    <mat-card *ngIf=\"product\">\n        <img mat-card-image src=\"{{'/assets/img/products/'+product.image}}\" alt=\"{{product.title}}\" />\n        <mat-card-content>\n          <h1>{{product.title}}</h1>\n          <p>{{product.description}}</p>\n        </mat-card-content>\n        <mat-card-actions>\n          <button mat-raised-button (click)=\"openDialog(product)\">Info</button>\n          <button mat-raised-button color=\"primary\">${{product.price}} - Buy</button>\n        </mat-card-actions>\n    </mat-card>\n  </mat-grid-tile>\n</mat-grid-list>"
+module.exports = "<h1>Products</h1>\n<mat-grid-list cols=\"3\" rowHeight=\"3:6\">\n  <mat-grid-tile *ngFor=\"let product of products | async\">\n    <ng-container *ngIf=\"!product\">\n      <mat-spinner></mat-spinner>\n    </ng-container>\n    <mat-card *ngIf=\"product\">\n        <img mat-card-image src=\"{{'./assets/img/products/'+product.image}}\" alt=\"{{product.title}}\" />\n        <mat-card-content>\n          <h1>{{product.title}}</h1>\n          <p>{{product.description}}</p>\n        </mat-card-content>\n        <mat-card-actions>\n          <button mat-raised-button (click)=\"openDialog(product)\">Info</button>\n          <button mat-raised-button color=\"primary\">${{product.price}} - Buy</button>\n        </mat-card-actions>\n    </mat-card>\n  </mat-grid-tile>\n</mat-grid-list>"
 
 /***/ }),
 
